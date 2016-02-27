@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - inventory@localhost" uuid="2d00321b-b536-4235-b318-7e71872097ce">
+    <database-info product="MySQL" version="5.7.9" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="inventory"/>
+      <table id="2" parent="1" name="inventory"/>
+      <table id="3" parent="1" name="users"/>
+      <column id="4" parent="2" name="place">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="5" parent="2" name="rack">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="6" parent="2" name="shelf">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="7" parent="2" name="vendor">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="8" parent="2" name="partnum">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="9" parent="2" name="sn">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="10" parent="2" name="os">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="11" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="12" parent="2" name="osid">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="13" parent="2" name="prim">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="14" parent="2" name="mol">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="15" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="16" parent="3" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="17" parent="3" name="user_login">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="18" parent="3" name="user_password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="19" parent="3" name="user_hash">
+        <mandatory>1</mandatory>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="20" parent="3" name="user_ip">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="21" parent="3" name="user_level">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="22" parent="3" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
